@@ -1,0 +1,21 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A simple to do app from frontend mentor",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "style": ""
+  },
+  "keywords": [
+    "frontend",
+    "todo"
+  ],
+  "author": "AndresMpa",
+  "license": "MIT",
+  "devDependencies": {
+    "stylus": "^0.60.0"
+  }
+}
