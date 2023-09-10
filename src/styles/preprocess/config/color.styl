@@ -1,17 +1,30 @@
-picture_background =  hsl(235, 21%, 11%)
-picture_decoration =  hsl(235, 24%, 19%)
+/*
+  Gradient
+*/
+picture_decoration = linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
 
-background =  hsl(234, 39%, 85%)
-canvas =  hsl(236, 33%, 92%)
-detail =  hsl(234, 11%, 52%)
-letter = hsl(233, 14%, 35%)
-label = hsl(237, 14%, 26%)
+/*
+  Status
+*/
+// Active
+color_active = hsl(220, 98%, 61%)
+// Complete
+color_strikethrough = hsl(233, 14%, 35%)
+color_strikethrough_letter = hsl(237, 14%, 26%)
 
-picture_background_light = hsl(220, 98%, 61%)
-picture_decoration_light = linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+/*
+  Theme
+*/
 
-background_light =  hsl(0, 0%, 98%)
-canvas_light =  hsl(236, 33%, 92%)
-detail_light =  hsl(233, 11%, 84%)
-letter_light =  hsl(236, 9%, 61%)
-label_light =  hsl(235, 19%, 35%)
+color_background =  hsl(235, 21%, 11%)
+color_canvas = hsl(235, 24%, 19%)
+color_detail = hsl(234, 39%, 85%)
+color_letter = hsl(236, 33%, 92%)
+color_label = hsl(234, 11%, 52%)
+
+[data-theme="light"]
+  color_background = hsl(0, 0%, 98%)
+  color_canvas = hsl(236, 33%, 92%)
+  color_detail = hsl(236, 9%, 61%)
+  color_letter = hsl(233, 11%, 84%)
+  color_label = hsl(235, 19%, 35%)

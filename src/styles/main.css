@@ -1,9 +1,15 @@
 @font-face {
-  font-family: JosefinSans;
   font-style: normal;
+  font-family: JosefinSans;
   src: url("../assets/fonts/JosefinSans.ttf");
 }
 * {
-  color: #4d5066;
-  font-family: "JosefinSans", Arial, sans-serif;
+  margin: 0%;
+  padding: 0%;
+  overflow-anchor: none;
+  background: #161722;
+}
+body {
+  color: #e4e5f1;
+  font: 18px 400 "JosefinSans", Arial, sans-serif;
 }

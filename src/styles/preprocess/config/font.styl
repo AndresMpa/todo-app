@@ -1,7 +1,19 @@
 @font-face
-  font-family JosefinSans
   font-style normal
+  font-family JosefinSans
   src url("../../../assets/fonts/JosefinSans.ttf")
 
+title-font = "JosefinSans", Arial, sans-serif
+title-weight = 700
+title-size = 24px
 
 text-font = "JosefinSans", Arial, sans-serif
+text-weight = 400
+text-size = 18px
+
+body-text()
+  font text-size text-weight text-font
+
+title-font()
+  font title-size title-weight title-font
+  text-transform capitalize
