@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "style": ""
+    "style": "npx stylus --compress ./src/styles/preprocess/main.styl ./src/styles/main.css"
   },
   "keywords": [
     "frontend",
@@ -16,6 +16,7 @@
   "author": "AndresMpa",
   "license": "MIT",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "stylus": "^0.60.0"
   }
 }
