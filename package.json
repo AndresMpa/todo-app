@@ -7,8 +7,8 @@
     "doc": "doc"
   },
   "scripts": {
-    "style": "npx stylus -w -r -l ./src/styles/preprocess/main.styl -o ./src/styles/",
     "style:build": "npx stylus -c ./src/styles/preprocess/main.styl ./src/styles/main.css",
+    "style": "npx stylus -w -r ./src/styles/preprocess/main.styl -o ./src/styles/",
     "dev": "live-server"
   },
   "keywords": [
