@@ -7,7 +7,9 @@
     "doc": "doc"
   },
   "scripts": {
-    "style": "npx stylus --compress ./src/styles/preprocess/main.styl ./src/styles/main.css"
+    "style": "npx stylus -w -r -l ./src/styles/preprocess/main.styl -o ./src/styles/",
+    "style:build": "npx stylus -c ./src/styles/preprocess/main.styl ./src/styles/main.css",
+    "dev": "live-server"
   },
   "keywords": [
     "frontend",
