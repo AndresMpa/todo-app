@@ -1,0 +1,9 @@
+@font-face {
+  font-family: JosefinSans;
+  font-style: normal;
+  src: url("../assets/fonts/JosefinSans.ttf");
+}
+* {
+  color: #4d5066;
+  font-family: "JosefinSans", Arial, sans-serif;
+}
