@@ -26,8 +26,8 @@ todo-icon()
   &:hover
     cursor: pointer
 
-  &__active
-    background-color: gradient_decoration
+  &__complete
+    background: gradient_decoration
 
 todo-image()
   display: none
@@ -37,7 +37,7 @@ todo-image()
   left: 50%
   transform: translate(-50%, -50%)
 
-  &__active
+  &__complete
     display: block
 
 todo-description()
@@ -49,7 +49,10 @@ todo-description()
 
   &:focus
     color: color_letter
-  //text-decoration: line-through
+
+  &__complete
+    color: color_label
+    text-decoration: line-through
 
 
 .addTodo
