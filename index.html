@@ -21,6 +21,7 @@
           <img
             src="./src/assets/images/icon-sun.svg"
             class="header--icon__image"
+            id="themeSwitcher"
             alt="alt"
           />
         </figure>
@@ -51,7 +52,7 @@
         <p class="config--remainig"><span id="itemsLeft">0</span> items left</p>
         <ul class="config--filter" id="filters">
           <li class="config--filter--item">
-            <button class="config--button">All</button>
+            <button class="config--button config--button__active">All</button>
           </li>
           <li class="config--filter--item">
             <button class="config--button">Active</button>
@@ -65,6 +66,22 @@
         </button>
       </article>
     </main>
+
+    <footer class="alt-config">
+      <ul class="alt-config--filter" id="altFilters">
+        <li class="alt-config--filter--item">
+          <button class="alt-config--button alt-config--button__active">All</button>
+        </li>
+        <li class="alt-config--filter--item">
+          <button class="alt-config--button">Active</button>
+        </li>
+        <li class="alt-config--filter--item">
+          <button class="alt-config--button">Completed</button>
+        </li>
+      </ul>
+    </footer>
+
+    <p class="hint--label">Drag and drop to reorder list</p>
 
     <script src="src/main.js" type="module"></script>
   </body>
