@@ -2,20 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="icon"
-      sizes="32x32"
-      type="image/png"
       href="./src/assets/images/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
     />
     <link rel="stylesheet" href="src/styles/main.css" />
     <title>To do app</title>
   </head>
   <body>
+    <header class="header">
+      <article class="header--wrapper">
+        <h1 class="header--title">todo</h1>
+        <figure class="header--icon">
+          <img
+            src="./src/assets/images/icon-sun.svg"
+            class="header--icon__image"
+            alt="alt"
+          />
+        </figure>
+      </article>
+    </header>
+
     <main class="app">
+      <nav class="addTodo">
+        <figure class="addTodo--status">
+          <img
+            src="./src/assets/images/icon-check.svg"
+            class="addTodo--status--image"
+            alt="Check"
+          />
+        </figure>
+        <input
+          placeholder="Create a new todo..."
+          class="addTodo--description"
+          name="todo"
+          type="text"
+        />
+      </nav>
+
+      <article class="config">
+        <p class="config--remainig"><span id="itemsLeft">0</span> items left</p>
+        <ul class="config--filter">
+          <li class="config--filter--item">
+            <button class="config--button" id="all">All</button>
+          </li>
+          <li class="config--filter--item">
+            <button class="config--button" id="active">Active</button>
+          </li>
+          <li class="config--filter--item">
+            <button class="config--button" id="completed">Completed</button>
+          </li>
+        </ul>
+        <button class="config--clear config--button">Clear Completed</button>
+      </article>
     </main>
+
     <script src="src/main.js" type="module"></script>
   </body>
 </html>
