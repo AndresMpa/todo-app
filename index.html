@@ -39,6 +39,7 @@
         <input
           placeholder="Create a new todo..."
           class="addTodo--description"
+          id="addTodo"
           name="todo"
           type="text"
         />
@@ -48,18 +49,20 @@
 
       <article class="config">
         <p class="config--remainig"><span id="itemsLeft">0</span> items left</p>
-        <ul class="config--filter">
+        <ul class="config--filter" id="filters">
           <li class="config--filter--item">
-            <button class="config--button" id="all">All</button>
+            <button class="config--button">All</button>
           </li>
           <li class="config--filter--item">
-            <button class="config--button" id="active">Active</button>
+            <button class="config--button">Active</button>
           </li>
           <li class="config--filter--item">
-            <button class="config--button" id="completed">Completed</button>
+            <button class="config--button">Completed</button>
           </li>
         </ul>
-        <button class="config--clear config--button">Clear Completed</button>
+        <button class="config--clear config--button" id="clear">
+          Clear Completed
+        </button>
       </article>
     </main>
 
