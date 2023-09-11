@@ -2,17 +2,37 @@
 @import "../config/color.styl"
 @import "../config/font.styl"
 
-.config
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-
+config-layout()
   padding: 25px
 
   color: color_strikethrough
 
   background: color_canvas
+
+config-button()
+  color: color_strikethrough
+
+  background: color_canvas
+  border: none
+  body-text()
+
+  &:hover
+    color: color_label
+    cursor: pointer
+
+  &__active
+    color: color_active
+
+    &:hover
+      cursor: pointer
+
+.config
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
   border-radius: 0px 0px 5px 5px
+  config-layout()
 
   .config--reamining
     body-text()
@@ -29,18 +49,37 @@
     body-text()
 
   .config--button
-    color: color_strikethrough
+    config-button()
 
-    background: color_canvas
-    border: none
+
+.alt-config
+  display: none
+
+  margin: auto
+  width: app_size.mobile
+
+  border-radius: 0px 0px 5px 5px
+
+  config-layout()
+
+  @media screen and (max-width: mobile)
+    display: flex
+
+  .alt-config--reamining
     body-text()
 
-    &:hover
-      color: color_label
-      cursor: pointer
+  .alt-config--filter
+    display: flex
+    flex-direction: row
 
-    &:__active
-      color: color_active
+    justify-content: space-around
 
-      &:hover
-        cursor: pointer
+    .alt-config--filter--item
+      padding: 0px 10px
+      body-text()
+
+  .alt-config--clear
+    body-text()
+
+  .alt-config--button
+    config-button()
