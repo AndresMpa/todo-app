@@ -30,7 +30,17 @@ const filterTask = (filter) => {
 };
 
 const filterTodo = (filter, targetToRender, targetToActive) => {
-  targetToActive.classList.toggle("config--button__active");
+  targetToActive.parentNode.parentNode.children[0].children[0].classList.remove(
+    "config--button__active",
+  );
+  targetToActive.parentNode.parentNode.children[1].children[0].classList.remove(
+    "config--button__active",
+  );
+  targetToActive.parentNode.parentNode.children[2].children[0].classList.remove(
+    "config--button__active",
+  );
+
+  targetToActive.classList.add("config--button__active");
 
   renderList(targetToRender, filterTask(filter));
 };
