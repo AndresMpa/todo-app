@@ -1,0 +1,27 @@
+@import "../config/breakPoint.styl"
+@import "../config/color.styl"
+@import "../config/font.styl"
+
+.header
+  width: app_size.desktop
+  margin: 0px auto 25px
+  padding-top: 80px
+
+  .header--wrapper
+    display: flex
+    flex-direction: row
+
+  .header--title
+    text-transform: uppercase
+    letter-spacing: 15px
+    title-text()
+
+  .header--icon
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+    margin-left: auto
+
+    &:hover
+      cursor: pointer

@@ -1,12 +1,18 @@
 @import "../config/color.styl"
-@import "../config/font.styl"
+@require "../config/font.styl"
 
 *
   margin: 0%;
   padding: 0%;
   overflow-anchor: none;
-  background color_background
 
 body
-  color color_letter
+  background: color_background url("../../../../src/assets/images/bg-desktop-dark.jpg") no-repeat
+  margin: auto
+
+  color: color_letter
   body-text()
+
+ul, li
+  text-decoration: none
+  list-style: none

@@ -7,9 +7,149 @@
   margin: 0%;
   padding: 0%;
   overflow-anchor: none;
-  background: #161722;
 }
 body {
+  background: #161722 url("../assets/images/bg-desktop-dark.jpg") no-repeat;
+  margin: auto;
   color: #e4e5f1;
-  font: 18px 400 "JosefinSans", Arial, sans-serif;
+  font-size: 18px;
+  font-family: "JosefinSans", Arial, sans-serif;
+  font-weight: 400;
+}
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+@font-face {
+  font-style: normal;
+  font-family: JosefinSans;
+  src: url("../assets/fonts/JosefinSans.ttf");
+}
+.header {
+  width: 600px;
+  margin: 0px auto 25px;
+  padding-top: 80px;
+}
+.header .header--wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.header .header--title {
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  font-size: 42px;
+  font-family: "JosefinSans", Arial, sans-serif;
+  font-weight: 700;
+}
+.header .header--icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: auto;
+}
+.header .header--icon:hover {
+  cursor: pointer;
+}
+@font-face {
+  font-style: normal;
+  font-family: JosefinSans;
+  src: url("../assets/fonts/JosefinSans.ttf");
+}
+.addTodo {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #25273c;
+}
+.addTodo .addTodo--status {
+  position: relative;
+  width: 1.25em;
+  height: 1.25em;
+  margin: auto;
+  border-radius: 50%;
+  border: 1px solid #4d5066;
+  background-color: #25273c;
+}
+.addTodo .addTodo--status:hover {
+  cursor: pointer;
+}
+.addTodo .addTodo--status__active {
+  background-color: linear-gradient(115deg, #57ddff, #c058f3);
+}
+.addTodo .addTodo--status .addTodo--status--image {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.addTodo .addTodo--status .addTodo--status--image__active {
+  display: block;
+}
+.addTodo .addTodo--description {
+  width: 90%;
+  border: none;
+  outline: none;
+  color: #393a4c;
+  background-color: #25273c;
+  font-size: 18px;
+  font-family: "JosefinSans", Arial, sans-serif;
+  font-weight: 400;
+}
+.addTodo .addTodo--description:focus {
+  color: #e4e5f1;
+}
+@font-face {
+  font-style: normal;
+  font-family: JosefinSans;
+  src: url("../assets/fonts/JosefinSans.ttf");
+}
+.config {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px;
+  color: #4d5066;
+  background: #25273c;
+  border-top: 1px solid #4d5066;
+  border-radius: 0px 0px 5px 5px;
+}
+.config .config--reamining {
+  font-size: 18px;
+  font-family: "JosefinSans", Arial, sans-serif;
+  font-weight: 400;
+}
+.config .config--filter {
+  display: flex;
+  flex-direction: row;
+}
+.config .config--filter .config--filter--item {
+  padding: 0px 10px;
+  font-size: 18px;
+  font-family: "JosefinSans", Arial, sans-serif;
+  font-weight: 400;
+}
+.config .config--clear {
+  font-size: 18px;
+  font-family: "JosefinSans", Arial, sans-serif;
+  font-weight: 400;
+}
+.config .config--button {
+  color: #4d5066;
+  background: #25273c;
+  border: none;
+  font-size: 18px;
+  font-family: "JosefinSans", Arial, sans-serif;
+  font-weight: 400;
+}
+.config .config--button:hover {
+  color: #3a7bfd;
+  cursor: pointer;
+}
+.app {
+  width: 600px;
+  margin: auto;
 }

@@ -1,0 +1,42 @@
+@import "../config/breakPoint.styl"
+@import "../config/color.styl"
+@import "../config/font.styl"
+
+.config
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  
+  padding: 25px
+
+  color: color_strikethrough
+
+  background: color_canvas
+  border-top: 1px solid color_strikethrough
+
+  border-radius: 0px 0px 5px 5px
+
+  .config--reamining
+    body-text()
+
+  .config--filter
+    display: flex
+    flex-direction: row
+    
+    .config--filter--item
+      padding: 0px 10px
+      body-text()
+
+  .config--clear
+    body-text()
+
+  .config--button
+    color: color_strikethrough
+
+    background: color_canvas
+    border: none
+    body-text()
+
+    &:hover
+      color: color_active
+      cursor: pointer
