@@ -6,14 +6,12 @@
   display: flex
   flex-direction: row
   justify-content: space-between
-  
+
   padding: 25px
 
   color: color_strikethrough
 
   background: color_canvas
-  border-top: 1px solid color_strikethrough
-
   border-radius: 0px 0px 5px 5px
 
   .config--reamining
@@ -22,7 +20,7 @@
   .config--filter
     display: flex
     flex-direction: row
-    
+
     .config--filter--item
       padding: 0px 10px
       body-text()
@@ -38,5 +36,11 @@
     body-text()
 
     &:hover
-      color: color_active
+      color: color_label
       cursor: pointer
+
+    &:__active
+      color: color_active
+
+      &:hover
+        cursor: pointer
