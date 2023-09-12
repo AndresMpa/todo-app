@@ -23,4 +23,38 @@ const removeTask = (index, target) => {
   target.children[index].remove();
 };
 
-export { completeTask, removeTask };
+const switchTask = (prev, curr) => {
+  const todoList = JSON.parse(localStorage.getItem("tasks"));
+  const prevNode = document.getElementById(prev.index);
+  const currNode = document.getElementById(curr.index);
+  let temp;
+
+  temp = todoList[prev.index];
+  todoList[prev.index] = todoList[curr.index];
+  todoList[curr.index] = temp;
+
+  localStorage.setItem("tasks", JSON.stringify(todoList));
+
+  temp = [
+    [
+      prevNode.children[0].classList.value,
+      prevNode.children[1].classList.value,
+      prevNode.children[0].children[0].classList.value,
+    ],
+    [
+      currNode.children[0].classList.value,
+      currNode.children[1].classList.value,
+      currNode.children[0].children[0].classList.value,
+    ],
+  ];
+
+  prevNode.children[0].classList = temp[1][0];
+  prevNode.children[1].classList = temp[1][1];
+  prevNode.children[0].children[0].classList = temp[1][2];
+
+  currNode.children[0].classList = temp[0][0];
+  currNode.children[1].classList = temp[0][1];
+  currNode.children[0].children[0].classList = temp[0][2];
+};
+
+export { completeTask, removeTask, switchTask };

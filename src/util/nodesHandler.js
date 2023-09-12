@@ -1,4 +1,5 @@
 import { completeTask, removeTask } from "../events/modifyTodoStatus.js";
+import { dragAndDropHandler } from "../events/dragAndDropTodo.js";
 
 /**
  Removes all children inside a node
@@ -17,7 +18,6 @@ const createIcon = (config) => {
   const image = document.createElement("img");
 
   figure.classList = config.figureClass;
-  figure.dataset.index = config.index;
   image.classList = config.imageClass;
   image.src = config.imageSrc;
   image.alt = config.imageAlt;
@@ -36,6 +36,8 @@ const todoStructure = (index, msg) => {
   const paragraph = document.createElement("p");
 
   container.classList = "todo";
+  container.draggable = "true";
+  container.id = index;
 
   paragraph.classList = "todo--description";
   paragraph.textContent = msg;
@@ -45,7 +47,6 @@ const todoStructure = (index, msg) => {
     imageClass: "todo--icon--image",
     imageSrc: `${url}/icon-check.svg`,
     imageAlt: "Check",
-    index: index,
   });
 
   const cross = createIcon({
@@ -53,7 +54,6 @@ const todoStructure = (index, msg) => {
     imageClass: "todo--cross--image",
     imageSrc: `${url}/icon-cross.svg`,
     imageAlt: "Cross",
-    index: index,
   });
 
   container.append(check, paragraph, cross);
@@ -68,12 +68,14 @@ const renderList = (targetToRender, tasks) => {
   let todoList = [];
   let currentTodo;
   tasks.forEach((item, index) => {
-    currentTodo = todoStructure(index, item.task);
-    
+    const currentTodo = todoStructure(index, item.task);
+
     if (item.status) {
       currentTodo.children[0].classList.add("todo--icon__complete");
       currentTodo.children[1].classList.add("todo--description__complete");
-      currentTodo.children[0].children[0].classList.add("todo--icon--image__complete");
+      currentTodo.children[0].children[0].classList.add(
+        "todo--icon--image__complete",
+      );
     }
 
     currentTodo.children[0].addEventListener("click", () =>
@@ -83,6 +85,8 @@ const renderList = (targetToRender, tasks) => {
     currentTodo.children[2].addEventListener("click", () =>
       removeTask(index, targetToRender),
     );
+
+    dragAndDropHandler(currentTodo);
 
     todoList.push(currentTodo);
   });
