@@ -5,6 +5,10 @@ config-layout()
 
   background: color_canvas
 
+  @media screen and (max-width: mobile)
+    width: app_size.mobile
+    padding: 25px 0px
+
 config-button()
   color: color_strikethrough
 
@@ -27,8 +31,11 @@ config-button()
   flex-direction: row
   justify-content: space-between
 
-  border-radius: 0px 0px 5px 5px
+  border-radius(0px, 0px, 5px, 5px)
   config-layout()
+
+  @media screen and (max-width: mobile)
+    justify-content: space-around
 
   .config--reamining
     body-text()
@@ -36,6 +43,9 @@ config-button()
   .config--filter
     display: flex
     flex-direction: row
+
+    @media screen and (max-width: mobile)
+      display: none
 
     .config--filter--item
       padding: 0px 10px
@@ -51,15 +61,17 @@ config-button()
 .alt-config
   display: none
 
-  margin: auto
+  margin: 25px auto 0px
   width: app_size.mobile
 
-  border-radius: 0px 0px 5px 5px
+  border-radius(5px)
 
   config-layout()
 
   @media screen and (max-width: mobile)
     display: flex
+    flex-direction: row
+    justify-content: space-between
 
   .alt-config--reamining
     body-text()
@@ -67,8 +79,9 @@ config-button()
   .alt-config--filter
     display: flex
     flex-direction: row
-
     justify-content: space-around
+
+    margin: auto
 
     .alt-config--filter--item
       padding: 0px 10px

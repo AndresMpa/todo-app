@@ -5,7 +5,10 @@ todo()
   padding: 20px
 
   background-color: color_canvas
-  
+
+  @media screen and (max-width: mobile)
+    width: app_size.mobile
+
 todo-icon()
   position: relative
   margin: auto
@@ -57,16 +60,23 @@ todo-description()
   border-radius(5px)
   todo()
 
+  @media screen and (max-width: mobile)
+    padding: 25px 0px
+
   .addTodo--icon
     todo-icon()
     .addTodo--icon--image
       todo-image()
   .addTodo--description
+    padding-right: 5%
     width: 90%
 
     color: color_strikethrough_letter;
 
     todo-description()
+
+    @media screen and (max-width: mobile)
+      width: 75%
 
 
 .todo
@@ -77,6 +87,9 @@ todo-description()
 
   &:first-child
     border-radius(5px, 5px, 0px, 0px)
+
+  @media screen and (max-width: mobile)
+    padding: 25px 0px
 
   .todo--icon
     todo-icon()
@@ -91,6 +104,9 @@ todo-description()
     color: color_letter
 
     todo-description()
+
+    @media screen and (max-width: mobile)
+      width: 60%
 
   .todo--cross
     position: relative

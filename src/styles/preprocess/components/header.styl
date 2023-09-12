@@ -3,6 +3,10 @@
   margin: 0px auto 25px
   padding-top: 80px
 
+  @media screen and (max-width: mobile)
+    width: app_size.mobile
+    padding: 25px 5px
+
   .header--wrapper
     display: flex
     flex-direction: row
@@ -10,6 +14,7 @@
   .header--title
     text-transform: uppercase
     letter-spacing: 15px
+    color: color_title
     title-text()
 
   .header--icon
